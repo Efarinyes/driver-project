@@ -57,6 +57,12 @@ class Graph {
         return segs;
     }
 
+     dispose() {
+        this.points.length = 0;
+        this.segments.length = 0;
+    }
+
+
     draw(ctx) {
         for (const seg of this.segments) {
             seg.draw(ctx);
